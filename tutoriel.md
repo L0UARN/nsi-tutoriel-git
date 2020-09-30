@@ -186,7 +186,7 @@ apparaît dans la console, copiez la ligne se trouvant juste au dessus
 (**sans le $**), collez-la dans la console, et remplacez tous les `\` par
 des `/`, puis faites `Entrée`.
 
-// TODO: ajouter une illustration pour l'installation du linter
+![Installation du linter](images/configurations_1.png)
 
 ### Git
 Dans le dossier "git" de votre clé USB, où vous avez installé
@@ -217,4 +217,4 @@ alias pip="f:/python/Scripts/pip.exe"
 Même chose, mais pour le programme Pip, qui permet d'installer des
 libraries (ou bibliothèques) pour Python.
 
-![Configuration de Git](images/configurations_1.png)
+![Configuration de Git](images/configurations_2.png)
