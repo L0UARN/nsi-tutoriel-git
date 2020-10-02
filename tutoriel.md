@@ -313,3 +313,62 @@ vous avez fait, c'est à dire qu'il faut toujours ajouter les fichiers et commit
 revert. On vous demandera encore ici d'utiliser Vim pour donner un nom au revert.
 
 ![Exemple d'un revert](images/git_et_github_3.png)
+
+Sashez qu'il est aussi possible de revert un revert de la meme facon qu'on revert un
+commit.
+
+![Revert d'un revert](images/git_et_github_4.png)
+
+### Mettre en ligne son repo avec GitHub
+Pour le moment, vous n'avez travaille avec Git que localement, sur votre propre PC, en
+enregistrant les fichiers de votre projet seuelement sur votre disque dur. GitHub est un
+service qui vous propose d'heberger sur leurs serveurs vos repos, gratuitement. Grace a
+cela, plusieurs personnes peuvent travailler ensemble sur un meme projet.
+
+Pour syncroniser votre repo sur votre ordinateur et un repo heberge sur GitHub, vous allez
+tout d'abord devoir en creer un sur votre compte GitHub. Pour ce faire, reouvrez la page
+d'acceuil, reconnectez vous si vous vous etes fait deconnectes, puis cliquez sur le bouton
+vert a gauche aui vous invite a creer un nouveau repo. On va vous demamder un nom, vous
+pouvez vous contenter de "nsi-repo-tuto" ou quelque chose du style pour le moment. Il est
+important de noter que vous ne devez jamais utiliser de majuscules, de caracteres
+speciaux, ou d'espaces dans les noms de repos. Il faut remplacer les espaces par des
+tirets `-`. On vous demamde aussi une description, que vous n'etes pas obliges de fournir.
+
+Une fois avoir valide la creation de votre nouveau repo, on vous redirige sur sa page.
+GitHub vous fourni meme un mini tutoriel pour vous expliquer comment mettre en ligne des
+fichiers de votre repo local dans ce repo, et c'est ce que nous allons suivre.
+
+Retournez dans VSCode, et creez un nouveau fichier que vous appelerez "README.md" (ce nom
+est important). Ce type de fichier s'appelle le mardown (et c'est avec le mardown que
+j'ecris ce tutoriel), une sorte de langage, pas de programmation, mais de presentation.
+Discord vous propose d'utiliser le mardown dans vos message pour les formatter par
+exemple. Dans ce fichier README.md, vous pouvez ecrire quelque chose comme ceci :
+```markdown
+#NSI Tuto Repo
+Ceci est un repo fait pour suivre un tutoriel en classe de NSI
+```
+L'important, c'est que le fichier ne soit pas vide.
+
+Ensuite, dans GitBash, ou depuis le terminal de VSCode (qu'on a configure pour qu'il soit
+un raccourci pour GitBash), que vous pouvez ouvrir avec `Ctrl+ù`, ajoutez README.md au
+prochain commit en utilisant la commamde `git add`, puis faites ce commit.
+
+Retournez sur la page GitHub. Dans la section "…or push an existing repository from the
+command line", on vous explique comment faire le lien. Copiez simplement la premiere, puis
+la deuxieme, puis la troisieme ligne dans la console. Si tout a bien marche, une fois la
+commande numero 3 entree, une petite fenetre s'ouvrira qui vous demandera de vous
+connecter avec votre compte GitHub. Une fois connecte, acceptez toutes les eventuelles
+demandes qu'on vous jette dessus, puis vous devriez voire un chargement se faire dans
+votre terminal, ce qui signifie que vos fichiers sont en train d'etres transmis sur
+GitHub.
+
+Une fois le chargemet termine, vous pouvez rafraichir la page GitHub, qui devrait
+maintenant lister tous les fichiers de votre repo, et le README.md juste en dessous.
+
+Si vous voulez ajouter de nouvelles choses sur votre repo, il suffit maintenant de
+modifier les fichiers sur votre PC comme vous le souhaitez, de commit comme vous le feriez
+normalement, puis d'entrer la commande
+```
+git push -u origin master
+```
+dans votre terminal.
