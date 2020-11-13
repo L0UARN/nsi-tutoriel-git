@@ -39,7 +39,7 @@ se lancerait en ouvrant la page).
 **Ce téléchargement n'est nécessaire que si vous ne l'avez pas déjà installé sur votre
 ordinateur, ou que vous utilisez une version qui n'est plus à jour.**
 
-Ouvrez [la page de téléchargements](https://www.python.org/downloads/release/python-385/),
+Ouvrez [la page de téléchargements](https://www.python.org/downloads/release/python-390/),
 puis cliquez sur le fichier "Windows x86-x64 executable installer".
 
 ![Le téléchargement de Python](images/telechargements_2.png)
@@ -107,7 +107,8 @@ Pensez à changer "f" par la lettre de votre clé USB que vous avez noté plus t
 
 La première ligne permet de changer le chemin dans lequel VSCode va chercher Git, et la
 deuxième à changer le programme qui nous sert d'invite de commandes (oui, nous avons
-besoin d'utiliser l'invite de commande).
+besoin d'utiliser l'invite de commande). Pensez à sauvegarder le fichier une fois que
+vous avez fini de le modifier, en utilisant `Ctrl+S`.
 
 Pour pouvoir programmer confortablement en Python avec VSCode, nous avons besoin
 d'installer l'extension du même nom, qui propose de nombreuse fonctionnalités comme la
@@ -127,7 +128,8 @@ de la fenêtre, et rajoutez la ligne suivante, toujours entre les accolades
 "python.pythonPath": "f:\\python\\python.exe",
 ```
 
-Comme précedemment, remplacez le "f" par la lettre de votre clé.
+Comme précedemment, remplacez le "f" par la lettre de votre clé. N'oubliez pas de
+sauvegarder le fichier avec `Ctrl+S`.
 
 ![Configuration de Git](images/configurations_0.png)
 
@@ -153,6 +155,22 @@ F:\python\python.exe: can't open file 'f:vscodedataextensionsms-python.python-20
 ```
 apparaît dans la console, copiez la ligne se trouvant juste au dessus (**sans le $**),
 collez-la dans la console, et remplacez tous les `\` par des `/`, puis faites `Entrée`.
+
+Il est possible qu'aucune notification n'apparaisse, **dans ce cas ci et seulement si vous
+n'avez pas de notification qui apparait**, il va falloir installer Pylint manuellement.
+Pour ce faire, commencez par ouvrir le terminal avec `Ctrl+ù`, puis entrez la commande
+suivante :
+```
+f:/python/Scripts/pip.exe install pylint
+```
+en remplacant le `f` par la lettre de votre cle. Une fois l'installation finie, il faut
+dire a l'extension Python d'utiliser Pylint, alors retournez dans le fichier
+`settings.json`, et rajoutez les deux lignes suivantes :
+```
+"python.linting.pylintEnabled": true,
+"python.linting.enabled": true,
+```
+N'oubliez pas de sauvegarder.
 
 ![Installation du linter](images/configurations_1.png)
 
